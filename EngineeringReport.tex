@@ -351,8 +351,29 @@ According to the Inverse Law between Torque and Speed,
 Therefore, the wheel has an output speed of 468.7 RPM, with 6.192 Nm.
 
 
+\subsection{Utilizing the Phoenix6 API}
+
+	In order to control the two Kraken X60 motors, the Phoenix6 software framework by CTR electronics is used in order to interface with the built-in TalonFX motor controllers in each motor repectively. The RoboRio, which is a FRC specific robotics controller was not chosen due to its cost. Instead, a Raspberry Pi 4b was opted to run the Phoenix6 software framework.
+
+The following is a diagram of the architechture of the entire drivetrain:
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.4\textwidth]{DrivetrainArchitecture.png} % or figures/myphoto.png
+  \caption{Electric Drivetrain Architechture.}
+\end{figure}
 
 
+Included are the following components:
+\begin{enumerate}
+	\item Throttle: Used as input to allow the driver to control the power fed to the motors.
+	\item Analog to Digital converter: A custom built circuit to take in the 0.8 to 4.2 volt signal range and output UART serial data to be fed into the Raspberry PI.
+	\item Raspberry Pi 4b: Handles processing of throttle data and sends CAN frames via CANBUS in order to control the motor.
+ 	\item Canivore: A USB to CAN adapter made by CTR Electronics.
+	\item Kraken X60: Two motors in tandem used to power the rear wheel of the car.
+\end{enumerate}
+
+\subsection
 \subsection{Strategy}
 
 
