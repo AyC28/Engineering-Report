@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.7)  7 MAR 2026 18:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.7)  7 MAR 2026 21:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -892,67 +892,102 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {C:/Users/Bobby/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<Course.png, id=81, 453.19313pt x 511.9125pt>
+<Course.png, id=21, 453.19313pt x 511.9125pt>
 File: Course.png Graphic file (type png)
 <use Course.png>
 Package pdftex.def Info: Course.png  used on input line 74.
 (pdftex.def)             Requested size: 328.82707pt x 371.4356pt.
  [2 <./Course.png>] [3]
-<Car.png, id=109, 558.58687pt x 412.54124pt>
+<Car.png, id=54, 558.58687pt x 412.54124pt>
 File: Car.png Graphic file (type png)
 <use Car.png>
 Package pdftex.def Info: Car.png  used on input line 121.
 (pdftex.def)             Requested size: 328.82707pt x 242.86215pt.
-<Battery.png, id=110, 567.62062pt x 497.60907pt>
+<Battery.png, id=55, 567.62062pt x 497.60907pt>
 File: Battery.png Graphic file (type png)
 <use Battery.png>
 Package pdftex.def Info: Battery.png  used on input line 136.
 (pdftex.def)             Requested size: 140.92793pt x 123.54396pt.
-<footstep.png, id=111, 385.44pt x 475.02469pt>
+<footstep.png, id=56, 385.44pt x 475.02469pt>
 File: footstep.png Graphic file (type png)
 <use footstep.png>
 Package pdftex.def Info: footstep.png  used on input line 145.
 (pdftex.def)             Requested size: 140.92793pt x 173.67612pt.
  [4 <./Car.png> <./Battery.png>]
-<steeringLoc.png, id=121, 285.31593pt x 263.48438pt>
+<steeringLoc.png, id=66, 285.31593pt x 263.48438pt>
 File: steeringLoc.png Graphic file (type png)
 <use steeringLoc.png>
 Package pdftex.def Info: steeringLoc.png  used on input line 154.
 (pdftex.def)             Requested size: 187.89914pt x 173.5223pt.
-<leg.png, id=122, 614.295pt x 429.10312pt>
+<leg.png, id=67, 614.295pt x 429.10312pt>
 File: leg.png Graphic file (type png)
 <use leg.png>
 Package pdftex.def Info: leg.png  used on input line 164.
 (pdftex.def)             Requested size: 187.89914pt x 131.25275pt.
  [5 <./footstep.png> <./steeringLoc.png>]
-<body.png, id=131, 450.18187pt x 481.04718pt>
+<body.png, id=76, 450.18187pt x 481.04718pt>
 File: body.png Graphic file (type png)
 <use body.png>
 Package pdftex.def Info: body.png  used on input line 181.
 (pdftex.def)             Requested size: 187.89914pt x 200.78326pt.
  [6 <./leg.png> <./body.png>]
-<back_section.png, id=140, 410.2828pt x 532.23843pt>
+<back_section.png, id=85, 410.2828pt x 532.23843pt>
 File: back_section.png Graphic file (type png)
 <use back_section.png>
 Package pdftex.def Info: back_section.png  used on input line 204.
 (pdftex.def)             Requested size: 187.89914pt x 243.74438pt.
  [7 <./back_section.png>]
-<Kraken X60.png, id=149, 2007.5pt x 2007.5pt>
+<Kraken X60.png, id=96, 2007.5pt x 2007.5pt>
 File: Kraken X60.png Graphic file (type png)
 <use Kraken X60.png>
 Package pdftex.def Info: Kraken X60.png  used on input line 240.
 (pdftex.def)             Requested size: 281.85587pt x 281.84451pt.
  [8 <./Kraken X60.png>] [9] [10]
-<DrivetrainArchitecture.png, id=191, 967.36406pt x 828.84656pt>
+<DrivetrainArchitecture.png, id=138, 967.36406pt x 828.84656pt>
 File: DrivetrainArchitecture.png Graphic file (type png)
 <use DrivetrainArchitecture.png>
 Package pdftex.def Info: DrivetrainArchitecture.png  used on input line 362.
 (pdftex.def)             Requested size: 187.89914pt x 160.98573pt.
 
+No file EngineeringReport.bbl.
+[11 <./DrivetrainArchitecture.png>] (EngineeringReport.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@par' on input line 377.
 
-Runaway argument?
-|\@empty \protect 
-! Paragraph ended befo
+Package rerunfilecheck Warning: File `EngineeringReport.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `EngineeringReport.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  B8F53D81196E9B0D607EF295058ECC4F;1922.
+ ) 
+Here is how much of TeX's memory you used:
+ 32203 strings out of 467867
+ 765991 string characters out of 5418335
+ 1269804 words of memory out of 5000000
+ 60515 multiletter control sequences out of 15000+600000
+ 637261 words of font info for 77 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,6n,104p,741b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Bobby/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/Bobby/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/Users/Bobby/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi12.pfb><C:/Users/Bobby/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Bobby/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Bobby/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Bobby/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Bobby/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/B
+obby/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C
+:/Users/Bobby/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt
+12.pfb>
+Output written on EngineeringReport.pdf (11 pages, 2706882 bytes).
+PDF statistics:
+ 216 PDF objects out of 1000 (max. 8388607)
+ 83 named destinations out of 1000 (max. 500000)
+ 63 words of extra memory for PDF output out of 10000 (max. 10000000)
+
