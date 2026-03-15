@@ -308,7 +308,11 @@ The capacity can be expressed through the 20-hour rate, since the Peukert Capaci
 \[2.75^{1.125} \times 20 = I_{race}^{1.125} \times 1.25\]
 \[I_{race} = 33.2 A\]
 
-Therefore, 805 can only operate at a maximum current of 33.2 A continuously.
+\[C_p = 2.75^{1.125} \times 20\]
+\[C_p = 62.4 \text{Ah}\]
+
+Therefore, 805 can only operate at a maximum current of 33.2 A continuously, with a
+Peukert's capacity of 62.4 Ah.
 
 \subsubsection*{Motor Performance At Maximum Current}
 
@@ -349,6 +353,62 @@ According to the Inverse Law between Torque and Speed,
 \[RPM_{output} = 468.7\]
 
 Therefore, the wheel has an output speed of 468.7 RPM, with 6.192 Nm.
+
+
+\subsubsection*{Stages of Race}
+
+The race next operates with a constant speed. Turns and straights would affect
+the current drawn from the battery. Therefore, 805 has to futher consider
+the current drawn from the following three situations:
+\begin{enumerate}
+  \item Cruise
+  \item Acceleration: 0-40 km/h
+  \item Acceleration: 25-40 km/h
+\end{enumerate}
+
+Amperage drawn to maintain a top speed of 40 km/h is determiend through a simple $F_net$
+statement:
+
+\begin{equation}
+  F_{net} = F_A - F_f - F_{AR}
+\end{equation}
+
+
+\bigskip
+
+
+$F_{net}$ is derrived from Newton's Second Law, $F_{net} = ma$;
+
+$F_A$ is the acceleration force provided by the Kraken motor;
+
+$F_f$ is the frictional force against acceleration force;
+
+$F_{AR}$ is the air resistance force agains acceleration force.
+
+\subsubsection*{Cruise}
+
+At cruise,
+
+\[ 0 = F_A - \mu mg - \frac{1}{2}\rho v^2 C_D A \]
+\[ F_A = \mu mg + \frac{1}{2}\rho v^2 C_D A \]
+
+The following assumption and calculations are used:
+\begin{itemize}
+  \item $\mu$ (coefficient of friction) is 0.005, a typical rating of bike wheel running on asphalt;
+  \item m (mass) is 116.5 kg;
+  \item $\rho$ (air density) is 1.225;
+  \item $v$ (velocity) is 11.11 m/s;
+  \item $C_D$ (coefficient of drag) is 0.35;
+  \item $A$ (front cross-sectional area) is 0.42;
+\end{itemize}
+
+\[ F_A = (0.005)(116.5)(9.81) + \frac{1}{2}(1.225)(11.11)^2(0.35)(0.42)\]
+\[ F_A = 16.8 ~N\]
+
+The acceleration force is 16.8 N.
+
+Since the acceleration force
+
 
 
 \subsection{Utilizing the Phoenix6 API}
