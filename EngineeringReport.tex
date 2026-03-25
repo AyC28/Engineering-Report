@@ -363,7 +363,7 @@ the current drawn from the following three situations:
 \begin{enumerate}
   \item Cruise
   \item Acceleration: 0-40 km/h
-  \item Acceleration: 25-40 km/h
+  \item Acceleration: 27-40 km/h
 \end{enumerate}
 
 Amperage drawn to maintain a top speed of 40 km/h is determiend through a simple $F_net$
@@ -407,7 +407,24 @@ The following assumption and calculations are used:
 
 The acceleration force is 16.8 N.
 
-Since the acceleration force
+With the acceleration force,
+\[F_A = \frac{\tau}{r_{wheel}}\]
+\[16.8 = \frac{\tau}{0.2413}\]
+\[\tau = 4.054 \text{~Nm}\]
+
+After gear ratio conversion, the torque from each individual motor is $0.169$ Nm. Refering
+back to the motor performance graph, 
+\begin{itemize}
+  \item Power: 101.3 W
+  \item Efficiency: 69.76\%
+  \item Current: 12.1 A
+  \item RPM: 5680 RPM\@ 
+\end{itemize}
+
+\subsubsection*{Accleration: 0-40 km/h}
+
+This stage would only be used during start or driver change, therefore used three times only. 
+805 is requried to stop fully and accelerate to its top speed.
 
 
 
