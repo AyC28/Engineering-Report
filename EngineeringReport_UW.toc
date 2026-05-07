@@ -1,0 +1,40 @@
+\contentsline {section}{Executive Summary}{ii}{Doc-Start}%
+\contentsline {section}{Contents}{iii}{Doc-Start}%
+\contentsline {section}{List of Figures}{v}{Doc-Start}%
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Project Overview}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Problem Statement}{1}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Design Objectives}{1}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Background}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Competition Overview}{1}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Design Constraints}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Vehicle Design}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Frame}{3}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Materials}{3}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Layout}{3}{subsubsection.3.1.2}%
+\contentsline {paragraph}{Leg section.}{4}{paragraph*.1}%
+\contentsline {paragraph}{Body section.}{6}{paragraph*.2}%
+\contentsline {paragraph}{Back section.}{6}{paragraph*.3}%
+\contentsline {subsection}{\numberline {3.2}Steering System}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Drivetrain}{7}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Overview}{7}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Performance Data}{8}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}Electrical Architecture}{8}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}Phoenix6 Software Framework}{8}{subsubsection.3.4.1}%
+\contentsline {section}{\numberline {4}Drivetrain Analysis}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Maximum Continuous Current}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Motor Performance at Maximum Current}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Stages of the Race}{12}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Cruise}{12}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Acceleration: 0--43 km/h}{13}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Acceleration: 27--43 km/h}{14}{subsubsection.4.3.3}%
+\contentsline {section}{\numberline {5}Results}{14}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Lap-Count Estimation}{14}{subsection.5.1}%
+\contentsline {paragraph}{Lap time.}{14}{paragraph*.4}%
+\contentsline {paragraph}{Pit stops.}{15}{paragraph*.5}%
+\contentsline {paragraph}{Time-limited lap count.}{15}{paragraph*.6}%
+\contentsline {paragraph}{Energy-limited lap count.}{15}{paragraph*.7}%
+\contentsline {paragraph}{Conclusion.}{15}{paragraph*.8}%
+\contentsline {section}{\numberline {6}Conclusions}{15}{section.6}%
+\contentsline {section}{\numberline {7}Recommendations}{16}{section.7}%
+\contentsline {section}{References}{17}{Item.27}%
