@@ -376,7 +376,7 @@ In order to control the two Kraken X60 motors, the Phoenix6 software
 framework by CTR Electronics is used to interface with the TalonFX motor
 controllers built into each motor \cite{phoenix6}. The RoboRIO, an
 FRC-specific robotics controller, was not selected due to its cost and power efficiency. Instead, a 
-Raspberry Pi 4B running Debian 13 was chosen instead to run the Phoenix6 framework. 
+Raspberry Pi 4B running Debian 13 was chosen to run the Phoenix6 framework. 
 Note that the Raspberry Pi only acts as a motor controller alongside collecting telemetry data. All control of the vehicle is still manually managed by the driver.
 
 The architecture of the control system is shown in
@@ -432,7 +432,7 @@ Data is send out to a computer running server software that will record telemetr
 
 The data sent allows the pit crew to monitor telemetry measured such as current draw from the battery and motor, bus voltage, calculate battery state of charge using the battery's internal resistance, motor velocity etc. Any error codes will also be encoded alongside the telemetry data in order to monitor the health of the vehicle for the duration of the race. The server off-device enables the data to be hosted on the internet, so multiple team members may access the telemetry data from separate locations during the race. 
 
-Data from the device will also be used to adjust current fed to the motors during the race to ensure the longevity of the battery throughout the entire race. By default, the current draw will be limited to a set amount as to not deplete the battery too fast. A switch will allow the driver to raise the current limit temporarily for actions such as overtaking, starting from a pit stop etc. The control software will then recalculate a new current limit that will preserve the battery for the duration of the race. 
+Data from the device will also be used to adjust current fed to the motors during the race to ensure the longevity of the battery throughout the entire race. By default, the current draw will be limited to a set amount as to not deplete the battery too fast. A switch will allow the driver to raise the current limit temporarily for actions such as overtaking, starting from a pit stop etc. The control software will then recalculate a new current limit that will preserve the battery for the duration of the race. This override should only be used sparingly as to not drastically the maximum current available to be applied to the motors.
 
 
 
