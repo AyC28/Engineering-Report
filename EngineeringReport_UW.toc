@@ -23,7 +23,7 @@
 \contentsline {subsubsection}{\numberline {3.4.1}Phoenix6 Software Framework}{8}{subsubsection.3.4.1}%
 \contentsline {subsubsection}{\numberline {3.4.2}Developing Safe Control Software}{10}{subsubsection.3.4.2}%
 \contentsline {subsubsection}{\numberline {3.4.3}Motor Control Logic}{11}{subsubsection.3.4.3}%
-\contentsline {subsubsection}{\numberline {3.4.4}Telemetry collection}{11}{subsubsection.3.4.4}%
+\contentsline {subsubsection}{\numberline {3.4.4}Telemetry collection}{12}{subsubsection.3.4.4}%
 \contentsline {section}{\numberline {4}Drivetrain Analysis}{12}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Maximum Continuous Current}{12}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Motor Performance at Maximum Current}{13}{subsection.4.2}%

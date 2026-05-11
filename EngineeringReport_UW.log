@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.7)  11 MAY 2026 09:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.3.7)  11 MAY 2026 15:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1054,20 +1054,20 @@ Package pdftex.def Info: DrivetrainArchitecture.png  used on input line 387.
 png>] [10]
 [11] [12]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
-23.
+22.
 
 (C:\Users\Bobby\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 [13] [14] [15]
-Overfull \hbox (7.83731pt too wide) in paragraph at lines 686--690
+Overfull \hbox (7.83731pt too wide) in paragraph at lines 685--689
 []\T1/ptm/m/n/12 Using the same 60 A per mo-tor burst cur-rent and the same gov
 -ern-ing equa-tion, the re-acceleration
  []
 
 [16] [17] [18] [19]
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 81
-8.
+7.
 
 (C:\Users\Bobby\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -1098,7 +1098,7 @@ ms/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Bobby/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Bobby/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Bobby/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on EngineeringReport_UW.pdf (25 pages, 3978211 bytes).
+Output written on EngineeringReport_UW.pdf (25 pages, 3978192 bytes).
 PDF statistics:
  492 PDF objects out of 1000 (max. 8388607)
  127 named destinations out of 1000 (max. 500000)
