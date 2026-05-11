@@ -60,7 +60,7 @@
   \begin{tabular}{rl}
     \textbf{Prepared for:} & Laurel Heights Secondary School Electric Vehicle Club \\[0.3em]
     \textbf{Prepared by:}  & Ayden Chiu \\[0.3em]
-                           & Bobby Liu \\[0.3em]
+                           & Robert Liu \\[0.3em]
                            & Keaton McDermott \\[0.3em]
     \textbf{Race:}         & Waterloo EV Challenge \\[0.3em]
     \textbf{Submitted:}    & \today \\
@@ -368,23 +368,24 @@ efficiency. The interactive version of the graph is available at
 \cite{krakengraph}.
 
 % -------------------------------------------------------------------------
-\subsection{Electrical Architecture}
+\subsection{Control Architecture}
 
 \subsubsection{Phoenix6 Software Framework}
 
 In order to control the two Kraken X60 motors, the Phoenix6 software
 framework by CTR Electronics is used to interface with the TalonFX motor
 controllers built into each motor \cite{phoenix6}. The RoboRIO, an
-FRC-specific robotics controller, was not selected due to its cost. A
-Raspberry Pi 4B was chosen instead to run the Phoenix6 framework.
+FRC-specific robotics controller, was not selected due to its cost and power efficiency. Instead, a 
+Raspberry Pi 4B running Debian 13 was chosen instead to run the Phoenix6 framework. 
+Note that the Raspberry Pi only acts as a motor controller alongside collecting telemetry data. All control of the vehicle is still manually managed by the driver.
 
-The architecture of the entire drivetrain is shown in
+The architecture of the control system is shown in
 Figure~\ref{fig:architecture}.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.5\textwidth]{DrivetrainArchitecture.png}
-  \caption{Electric drivetrain architecture.}
+  \caption{Electric control system architecture.}
   \label{fig:architecture}
 \end{figure}
 
@@ -396,12 +397,47 @@ The system includes the following components:
         a 0.8 to 4.2~V signal and outputs UART serial data to the
         Raspberry Pi;
   \item \textbf{Raspberry Pi 4B:} processes throttle data and transmits CAN
-        frames over the CAN bus to control the motors;
+        frames over the CAN bus to control the motors as well as recording telemetry data for analysis during and after the race;
   \item \textbf{Canivore:} a USB-to-CAN adapter manufactured by CTR
         Electronics;
   \item \textbf{Kraken X60:} two motors connected in tandem to drive the
-        rear wheel of the vehicle.
+        rear wheel of the vehicle;
 \end{enumerate}
+
+
+\subsubsection{Developing Safe Control Software}
+Due to the safety-critical nature of the control software, code must be written to prioritize stability and low-latency communication. 
+When researching methods on maintaining reliability in safety-critical systems, the NASA Jet Propulsion Laboratory "Power Of Ten" programming safety rules were used as a base guideline when developing the control software.
+It is then critical to implement the following concepts when designing the control software:
+\begin{enumerate}
+\item \textbf{Simple control flow:} Keeping the program predictable and linear by eliminating the use of complex flow logic such as recursion can act as risk prevention for bugs that might appear.
+\item \textbf{Fixed upper bound on all loops:} All loops should have a fixed upper bound to prevent the control software from looping infinitely and going into a unresponsive state. 
+\item \textbf{No dynamic memory allocation :} All necessary initializations are performed at boot, no new initializations are to be made afterwards, which reduces the risk of memory leaks and unpredictable behaviour from rountines such as memory garbage collection.
+\item \textbf{Function length restrictions :} Functions should be kept short (under 60 lines) to preserve readability of the logic. This reduces the risk of introducing bugs and makes debugging more simple.
+\item \textbf{Low Assertion density :} Before the execution of code, sanity checks must be performed to ensure that there are no anomalous conditions that may be out of range of nominal operation. These checks should be performed using booleans, so that they can be removed after testing before shipping the production software. Eg: The code should check for a nominal voltage range before proceeding with executing a command.
+\item \textbf{Small scope of objects :} Variables should be strictly kept within a small scope of its function as to not corrupt or be overwritten by another section of code. Eg: A variable pertaining to telemetry logging should not be in scope of motor control logic, so as to not inadvertenly overwrite motor control values during operation.
+\item \textbf{Checking return values :} Code should check the status codes returned from the Phoenix6 API for errors, and then execute the routine required to mitigate that error.
+\item \textbf{Limit the use of preprocessors :} Preprocessors are programs that modifies the source code pre-compilation. This rule may not technically apply to the runtime-based nature of python. It is still critical to limit the use of metaprogramming which can rewrite code which can decrease code readability and reliability.
+\item \textbf{Avoiding the use of pointers :} Pointers when used improperly can make tracing actions such as function calls difficult by obscuring the path that data takes in a program.
+\item \textbf{Compiling code with all warnings enabled :} This rule does not explicitly matter with runtime languages, though this rule is still important as errors might only be caught during the execution of code at runtime. Using static type checking tools such as Mypy, it is possible to "compile" the code as a form of pre-check before running the code. Field testing before the race will also be important to catch any exceptions that might occur.
+\end{enumerate}
+
+\subsubsection{Motor Control Logic}
+After researching potential control modes for 805, it was determined that the TorqueCurrentFOC control request will be used to drive the two Kraken X60 motors. This control mode maps throttle input directly to the amount of torque outputted using current as an input. FOC or Field Oriented Control is also used to improve energy efficiency by reducing heat generation though calculating the exact current needed to apply to the motors. The Kraken X60 motors are able to perform FOC calculations internally with the built-in TalonFX motor controllers and high-resolution encoder.
+
+A watchdog timer is implemented to monitor the serial signal from the throttle, and will disable the motors if no valid signal has been received for 100ms. By default, the motors have a disabled state until valid throttle signal is applied. 
+
+\subsubsection{Telemetry collection}
+Data is send out to a computer running server software that will record telemetry during the race. The SignalLogger feature of the Phoenix6 framework allows the capturing of various telemetry measured using the Kraken X60's built in motor controllers. The system uses a RS232 transceiver that broadcasts in the 433.30MHz band. The data is encoded as a JSON string and is send at a rate of 1hz via the radio because of limited bandwidth which is adequate for strategizing during the race, while the internal sample rate can achieve a frequency of 50hz for further analysis post race. Telemetry will be handled as a separate thread from the motor control thread. This ensures any lag in the telemetry system will not affect the control of the motor.
+
+The data sent allows the pit crew to monitor telemetry measured such as current draw from the battery and motor, bus voltage, calculate battery state of charge using the battery's internal resistance, motor velocity etc. Any error codes will also be encoded alongside the telemetry data in order to monitor the health of the vehicle for the duration of the race. The server off-device enables the data to be hosted on the internet, so multiple team members may access the telemetry data from separate locations during the race. 
+
+Data from the device will also be used to adjust current fed to the motors during the race to ensure the longevity of the battery throughout the entire race. By default, the current draw will be limited to a set amount as to not deplete the battery too fast. A switch will allow the driver to raise the current limit temporarily for actions such as overtaking, starting from a pit stop etc. The control software will then recalculate a new current limit that will preserve the battery for the duration of the race. 
+
+
+
+
+
 
 % =========================================================================
 \section{Drivetrain Analysis}
@@ -768,6 +804,8 @@ design:
   \item \textbf{Implement telemetry logging} (motor current, voltage, RPM,
         battery state of charge) so that race data can be used to refine
         the model for the next vehicle generation.
+  \item \textbf{Running control hardware with real-time operating system kernel} Using an RTOS such as FreeRTOS on the Raspberry Pi can further improve reliability by allowing the system to schedule tasks in a manner that ensures it's execution within a certain timeframe. The current implementation of the control software utilizes high-level python python libraries that are not thread-safe with a real-time environment, which could cause data corruption. As such, use of real-time operating systems will require further research and development after the October 2026 race.
+
 \end{enumerate}
 
 % =========================================================================
@@ -794,6 +832,8 @@ Motomaster, ``MTX-35 AGM battery specification sheet,'' Canadian Tire, 2025.
 W. Peukert, ``\"Uber die Abh\"angigkeit der Kapazit\"at von der
 Entladestromst\"arke bei Bleiakkumulatoren,'' \emph{Elektrotechnische
 Zeitschrift}, vol.~20, pp.~287--288, 1897.
+
+%https://www.researchgate.net/publication/220477862_The_Power_of_10_Rules_for_Developing_Safety-Critical_Code
 
 \end{thebibliography}
 

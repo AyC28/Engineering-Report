@@ -19,22 +19,25 @@
 \contentsline {subsection}{\numberline {3.3}Drivetrain}{7}{subsection.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.1}Overview}{7}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Performance Data}{8}{subsubsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.4}Electrical Architecture}{8}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.4}Control Architecture}{8}{subsection.3.4}%
 \contentsline {subsubsection}{\numberline {3.4.1}Phoenix6 Software Framework}{8}{subsubsection.3.4.1}%
-\contentsline {section}{\numberline {4}Drivetrain Analysis}{10}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Maximum Continuous Current}{10}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Motor Performance at Maximum Current}{11}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Stages of the Race}{12}{subsection.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.1}Cruise}{12}{subsubsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.2}Acceleration: 0--43 km/h}{13}{subsubsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.3}Acceleration: 27--43 km/h}{14}{subsubsection.4.3.3}%
-\contentsline {section}{\numberline {5}Results}{14}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Lap-Count Estimation}{14}{subsection.5.1}%
-\contentsline {paragraph}{Lap time.}{14}{paragraph*.4}%
-\contentsline {paragraph}{Pit stops.}{15}{paragraph*.5}%
-\contentsline {paragraph}{Time-limited lap count.}{15}{paragraph*.6}%
-\contentsline {paragraph}{Energy-limited lap count.}{15}{paragraph*.7}%
-\contentsline {paragraph}{Conclusion.}{15}{paragraph*.8}%
-\contentsline {section}{\numberline {6}Conclusions}{15}{section.6}%
-\contentsline {section}{\numberline {7}Recommendations}{16}{section.7}%
-\contentsline {section}{References}{17}{Item.27}%
+\contentsline {subsubsection}{\numberline {3.4.2}Developing Safe Control Software}{10}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Motor Control Logic}{11}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}Telemetry collection}{11}{subsubsection.3.4.4}%
+\contentsline {section}{\numberline {4}Drivetrain Analysis}{12}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Maximum Continuous Current}{12}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Motor Performance at Maximum Current}{13}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Stages of the Race}{14}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Cruise}{14}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Acceleration: 0--43 km/h}{15}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Acceleration: 27--43 km/h}{16}{subsubsection.4.3.3}%
+\contentsline {section}{\numberline {5}Results}{16}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Lap-Count Estimation}{17}{subsection.5.1}%
+\contentsline {paragraph}{Lap time.}{17}{paragraph*.4}%
+\contentsline {paragraph}{Pit stops.}{17}{paragraph*.5}%
+\contentsline {paragraph}{Time-limited lap count.}{17}{paragraph*.6}%
+\contentsline {paragraph}{Energy-limited lap count.}{17}{paragraph*.7}%
+\contentsline {paragraph}{Conclusion.}{17}{paragraph*.8}%
+\contentsline {section}{\numberline {6}Conclusions}{18}{section.6}%
+\contentsline {section}{\numberline {7}Recommendations}{18}{section.7}%
+\contentsline {section}{References}{20}{Item.38}%
